@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-rows: 60px 1fr;
+}
+
+header {
+    font-size: .8rem;
+    padding: 0 2em;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    justify-content: space-between;
+}
+
+header p {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+header img {
+    width: 1rem;
+}
+header ul {
+    display: inline-block;
+    list-style-type: none;
+    display: flex;
+}
+header li {
+    margin-left: 1rem;
+}
+header a:hover {
+    color: gray;
+}
+header a {
+    text-decoration: none;
+    color: black;
+    transition: .2s;
+}
+
+
+
+
+main {
+    height: 50vh;
+    margin: 3em;
+    display: grid;
+    place-items: center;
+}
+
+
+
+@keyframes configure-clockwise {
+    0% {
+      transform: rotate(0);
+    }
+    25% {
+      transform: rotate(90deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    75% {
+      transform: rotate(270deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes configure-xclockwise {
+    0% {
+      transform: rotate(45deg);
+    }
+    25% {
+      transform: rotate(-45deg);
+    }
+    50% {
+      transform: rotate(-135deg);
+    }
+    75% {
+      transform: rotate(-225deg);
+    }
+    100% {
+      transform: rotate(-315deg);
+    }
+  }
+  
+
+.configure-border-1 {
+    width: 115px;
+    height: 115px;
+    padding: 3px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: #fb5b53; */
+    background-color: #000;
+    animation: configure-clockwise 3s ease-in-out 0s infinite alternate;
+}
+  
+.configure-border-2 {
+    width: 115px;
+    height: 115px;
+    padding: 3px;
+    left: -115px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: rgb(63,249,220); */
+    background-color: #4B5563;
+    transform: rotate(45deg);
+    animation: configure-xclockwise 3s ease-in-out 0s infinite alternate;
+  }
+  
+  .configure-core {
+    width: 100%;
+    height: 100%;
+    /* background-color: #1d2630; */
+    background-color: whitesmoke;
+  }
+
+
+
+
+
+.never {
+    color: #111827;
+}
+
+
+
+
+/* footer */
+footer {
+    background-color: black;
+    color: white;
+    display: grid;
+    place-items: center;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+footer p {
+    color: rgb(180, 176, 176);
+    font-size: .9rem;
+}
+
+
+@media (max-width: 700px) {
+    .configure-border-1, .configure-border-2 {
+        width: 60px;
+        height: 60px;
+    }
+}

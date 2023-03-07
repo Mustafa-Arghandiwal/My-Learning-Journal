@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    grid-template-rows: 60px 60svh 1fr;
+    background-color: whitesmoke;
+}
+
+header {
+    font-size: .8rem;
+    padding: 0 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+}
+
+header p {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+header img {
+    width: 1rem;
+}
+header ul {
+    display: inline-block;
+    list-style-type: none;
+    display: flex;
+}
+header li {
+    margin-left: 1rem;
+}
+header a:hover {
+    color: gray;
+}
+header a {
+    text-decoration: none;
+    color: black;
+    transition: .2s;
+}
+
+
+
+
+
+.recent {
+    grid-column: 1/-1;
+    text-align: center;
+    margin-top: 1em;
+}
+
+/* featured post */
+
+.featured {
+    background-image: url("keyboard.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    padding: 1em;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+.featured p, h2 {
+    color: white;
+    /* width: 70%; */
+    margin: 0;
+}
+.featured .date {
+    font-size: .8rem;
+    color: gray;
+}
+.featured h2 {
+    font-size: 2rem;
+    margin-bottom: .7em;
+}
+.featured .featured-desc {
+    line-height: 1.5;
+    max-width: 800px;
+    letter-spacing: 1px;
+}
+
+
+
+
+
+/* content */
+.content {
+    padding: 3em 2em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    background-color: whitesmoke;
+}
+.post {
+    box-shadow: 0 0 3px black;
+    transition: .3s;
+}
+.post:hover {
+    box-shadow: 0 0px 10px black;
+    
+}
+.post:hover img {
+    filter: blur(2px);
+}
+.post div {
+    padding: .1em 1em 1.5em 1em;
+}
+.post p, h3 {
+    margin: 0;
+}
+.article {
+    min-height: 60%;
+}
+
+.post p {
+    line-height: 1.5;
+}
+.content img {
+    width: 100%;
+    object-fit: cover;
+    transition: .3s;
+}
+.content .blog-desc {
+    margin-top: 1em;
+    font-size: .9rem;
+    color: rgb(48, 45, 45);
+}
+
+.content .date {
+    font-size: .8rem;
+    color: gray;
+    margin-bottom: .5em;
+}
+.view-more {
+    grid-column: 1/-1;
+    text-align: center;
+    margin-top: 2em;
+}
+.view-more a {
+    color: black;
+    font-size: .8rem;
+}
+
+
+
+
+/* footer */
+footer {
+    background-color: black;
+    color: white;
+    display: grid;
+    place-items: center;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}

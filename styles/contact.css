@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: whitesmoke;
+}
+
+
+
+header {
+    font-size: .8rem;
+    padding: 0 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+}
+
+header p {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+header img {
+    width: 1rem;
+}
+header ul {
+    display: inline-block;
+    list-style-type: none;
+    display: flex;
+}
+header li {
+    margin-left: 1rem;
+}
+header a:hover {
+    color: gray;
+}
+header a {
+    text-decoration: none;
+    color: black;
+    transition: .2s;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    
+
+}
+h1 {
+    text-align: center;
+    color: #1F2937;
+    border-bottom: 5px solid #1F2937;
+    margin: 1em 1em 0 1em;
+    padding-bottom: .4em;
+    
+}
+
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile img {
+    border-bottom-left-radius: 100vw;
+    border-bottom-right-radius: 100vw;
+}
+
+.links{
+    display: grid;
+    place-items: center;
+    margin-bottom: 0em;
+    margin-left: 3em;
+}
+.links-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    justify-content: space-around;
+}
+
+
+
+.links p {
+    display: inline-block;
+    
+}
+.links a {
+    display: flex;
+    align-items: center;
+}
+ion-icon {
+    font-size: 2rem;
+    transition: .2s;
+}
+.links a {
+    text-decoration: none;
+    width: fit-content;
+}
+
+.facebook a{
+    color: #3b5998;
+
+}
+.twitter a {
+    color: #00acee;
+}
+.github a {
+    color: #171515;
+}
+.linkedin a{
+    color: #0072b1;
+}
+
+.links a:hover ion-icon {
+    transform: scale(1.3);
+}
+.links a:hover p {
+    text-decoration: underline;
+}
+
+/* footer */
+footer {
+    background-color: black;
+    color: rgb(161, 157, 157);
+    display: grid;
+    place-items: center;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+footer p {
+    margin: .8em 0 .3em;
+}
+footer div {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-bottom: .5em;
+}
+
+
+
+@media (min-width: 600px) {
+    main {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 3em;
+        gap: 0;
+    }
+    .links {
+        margin-top: 2em;
+    }
+    h1 {
+        margin: 1em 3em 0 3em;
+
+    }
+}
